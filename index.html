@@ -1,0 +1,888 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+    <title>Ошибки, которые мы любим</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1274, user-scalable=no">
+    <link rel="stylesheet" href="themes/yandex/styles/screen.css">
+    <link rel="stylesheet" href="themes/yandex/styles/print.css" media="print">
+
+    <link href="google-code-prettify/desert.css" rel="stylesheet"/>
+    <style>
+
+        .slide .min code
+        {
+            line-height: 40px;
+        }
+
+        .slide .min-min code
+        {
+            line-height: 35px;
+            font-size: 80%
+        }
+
+        .slide p.pre
+        {
+            margin-bottom: 10px;
+        }
+
+        .slide pre.min
+        {
+            margin-bottom: 30px;
+        }
+
+        .slide pre.prettyprint code:before
+        {
+            content: '';
+        }
+
+        .ico.mail
+        {
+            background: url("pictures/favicon-ie9.ico") no-repeat;
+            background-size: 18px 18px;
+        }
+
+        .slide ul.bullet-minus > li::before
+        {
+            content: '− ';
+        }
+
+        .slide ul.bullet-plus > li::before
+        {
+            content: '+ ';
+        }
+
+        .results
+        {
+            border-collapse: collapse;
+        }
+        .results td,
+        .results th
+        {
+            border: 1px solid #000;
+            padding: 0 0.5em;
+        }
+
+        .results th
+        {
+            text-align: center;
+            line-height: 140%;
+        }
+
+        .results td
+        {
+            white-space: nowrap;
+        }
+
+        .results .good
+        {
+            background: #00a86b;
+            text-align: center;
+        }
+
+        .results .avg
+        {
+            background: #cfb53b;
+            text-align: center;
+        }
+
+        .results .bad
+        {
+            background: #de3163;
+            text-align: center;
+        }
+
+        code.comment
+        {
+            color: #999
+        }
+
+        .xml-deleted
+        {
+            color: #aaa !important;
+            text-decoration: line-through;
+        }
+
+        .xml-comment
+        {
+            color: #428d06 !important;
+        }
+
+        .xml-decl
+        {
+            color: red !important;
+        }
+
+        .xml-tag
+        {
+            color: orange !important;
+        }
+
+        .xml-attr-name
+        {
+            color: #ed65a2 !important;
+        }
+
+        .xml-attr-value
+        {
+            color: #359ad8 !important;
+        }
+    </style>
+</head>
+<body class="list">
+    <header class="caption">
+        <h1>Ошибки, которые мы любим</h1>
+        <p>Алексей Андросов</p>
+        <p>Старший разработчик интерфейсов</p>
+        <p>FrontTalks, Екатеринбург, 5 июля 2013 года</p>
+    </header>
+    <div class="slide first">
+        <h2 style="left: 50px; width: 815px; font-size: 60px">Ошибки, которые мы любим</h2>
+        <div class="info" style="width: 500px; left: 50px; font-size: 70%; bottom: 20px">
+            <p>Алексей Андросов</p>
+            <p>Старший разработчик интерфейсов</p>
+            <p>FrontTalks, Екатеринбург, 5 июля 2013 года</p>
+        </div>
+    </div>
+    <div class="slide">
+        <h2>Обо мне</h2>
+        <img src="pictures/photo_160x160.jpg" style="float: right; padding: 0 0 40px 40px"/>
+        <p>
+            <img src="pictures/favicon-ie9.ico" style="width: 25px; height: 25px; margin-bottom: -7px"/>
+            <a href="mailto:doochik@ya.ru" style="margin-right: 20px">doochik@ya.ru</a>
+            <img src="pictures/twitter-bird-blue-on-white.png" style="width: 40px; height: 40px; margin: 0 0 -15px -10px"/>
+            <a style="margin-left: -8px" href="https://twitter.com/doochik">@doochik</a>
+        </p>
+        <ul>
+            <li>По образованию – специалист по защите информации</li>
+            <li>6 лет в Яндексе, 2 года ведущий разработчик фронтенда в Я.Почте</li>
+            <li>Люблю копаться в браузерах и внедрять новые фичи из HTML5</li>
+            <li>Можете спрашивать про JS, CSS и frontend в целом</li>
+        </ul>
+    </div>
+	<div class="slide shout">
+        <h2>Баги – это нормально</h2>
+	</div>
+    <div class="slide">
+        <h2>Баги – это нормально</h2>
+        <ul>
+            <li>Браузер – неконтроллируемая среда для исполнения вашего кода.</li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h2>Баги – это нормально</h2>
+        <ul>
+            <li>Браузер – неконтроллируемая среда для исполнения вашего кода.</li>
+            <li>Дефграгменация рынка браузеров.</li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h2>Баги – это нормально</h2>
+        <ul>
+            <li>Браузер – неконтроллируемая среда для исполнения вашего кода.</li>
+            <li>Дефграгменация рынка браузеров.</li>
+            <li>Человеку свойственно ошибаться.</li>
+        </ul>
+        <p class="note">Если вы меряете эффективность своей работы по количеству багов, поздравляю, у вас серьёзные проблемы.</p>
+    </div>
+	<div class="slide shout">
+        <h2>
+            Первое правило:<br/>
+            вы — дурак,<br/>
+            а все вокруг — Д'Артаньяны<br/>
+        </h2>
+	</div>
+    <div class="slide shout">
+        <h2>
+            Второе правило:<br/>
+            ошибка не в вашем коде, а в коде вашей команды
+        </h2>
+	</div>
+    <div class="slide">
+        <h2>Релизный цикл</h2>
+        <div style="text-align: center">
+            <img src="pictures/1.svg" style="position: relative; display: inline-block; left: 40px; height: 450px "/>
+        </div>
+	</div>
+    <div class="slide">
+        <h2>Релизный цикл</h2>
+        <div style="text-align: center">
+            <img src="pictures/2.svg" style="position: relative; display: inline-block; left: 40px; height: 450px "/>
+        </div>
+	</div>
+    <div class="slide">
+        <h2>Релизный цикл + мониторинг</h2>
+        <div style="text-align: center">
+            <img src="pictures/3.svg" style="position: relative; display: inline-block; left: 40px; height: 450px "/>
+        </div>
+	</div>
+    <div class="slide">
+        <h2>Зачем мониторинг?</h2>
+        <ul>
+            <li>Сломаться может в любой момент</li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h2>Зачем мониторинг?</h2>
+        <ul>
+            <li>Сломаться может в любой момент</li>
+            <li>Никто не гарантирует, что релиз заработает у реальных пользователей</li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h2>Зачем мониторинг?</h2>
+        <ul>
+            <li>Сломаться может в любой момент</li>
+            <li>Никто не гарантирует, что релиз заработает у реальных пользователей</li>
+            <li>Превысили допустимый предел ошибок – послали уведомление</li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h2>Зачем мониторинг?</h2>
+        <ul>
+            <li>Сломаться может в любой момент</li>
+            <li>Никто не гарантирует, что релиз заработает у реальных пользователей</li>
+            <li>Превысили допустимый предел ошибок – послали уведомление</li>
+            <li>Можно строить статистику</li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h2>На что смотрим</h2>
+        <ul>
+            <li>Доступность сервиса (код HTTP-ответа = 200)</li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h2>На что смотрим</h2>
+        <ul>
+            <li>Доступность сервиса (код HTTP-ответа = 200)</li>
+            <li>Скорость отдачи страниц</li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h2>На что смотрим</h2>
+        <ul>
+            <li>Доступность сервиса (код HTTP-ответа = 200)</li>
+            <li>Скорость отдачи страниц</li>
+            <li>Количество совершенных действий</li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h2>На что смотрим</h2>
+        <ul>
+            <li>Доступность сервиса (код HTTP-ответа = 200)</li>
+            <li>Скорость отдачи страниц</li>
+            <li>Количество совершенных действий</li>
+            <li>Количество писем в службу поддержки</li>
+            <li>и т.п.</li>
+        </ul>
+    </div>
+    <div class="slide shout">
+        <h2>А причем здесь фронтенд?</h2>
+    </div>
+    <div class="slide">
+        <h2>Что можно отследить в браузере</h2>
+        <ul>
+            <li>onload</li>
+            <li>ondomcontentload</li>
+            <li>Инициализация JS-компонентов</li>
+            <li>JS-ошибки</li>
+            <li>и т.п.</li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h2>А еще можно считать...</h2>
+        <ul>
+            <li>скорость загрузки</li>
+            <li>скорость инициализации</li>
+            <li>время ответа бекенда</li>
+            <li>и т.п.</li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h2>Почему именно в браузере</h2>
+        <ul>
+            <li>Эти события нельзя отследить по-другому</li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h2>Почему именно в браузере</h2>
+        <ul>
+            <li>Эти события нельзя отследить по-другому</li>
+            <li>Если сервер ответил на HTTP-запрос, это не значит, что браузер его принял</li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h2>Пример (запуск сервиса)</h2>
+        <pre class="min prettyprint lang-js">
+            <code>$(projectNS.init);</code>
+        </pre>
+    </div>
+    <div class="slide">
+        <h2>Пример (запуск сервиса)</h2>
+        <pre class="min prettyprint lang-js">
+            <code>if (<mark>window['jQuery']</mark>) {</code>
+            <code>    $(projectNS.init);</code>
+            <code>} else {</code>
+            <code>  <mark>log({type: 'fatal', error: 'no-jquery'})</mark>;</code>
+            <code>}</code>
+        </pre>
+    </div>
+    <div class="slide">
+        <h2>Пример (запуск сервиса)</h2>
+        <pre class="min prettyprint lang-js">
+            <code>if (window['jQuery']) {</code>
+            <code>  if (<mark>window['projectNS']</mark>) {</code>
+            <code>    $(projectNS.init);</code>
+            <code>  } else {</code>
+            <code>    <mark>log({type: 'fatal', error: 'no-project-js'})</mark>;</code>
+            <code>  }</code>
+            <code>} else {</code>
+            <code>  log({type: 'fatal', error: 'no-jquery'});</code>
+            <code>}</code>
+        </pre>
+    </div>
+    <div class="slide">
+        <h2>Одна функция на все времена</h2>
+        <pre class="min prettyprint lang-js">
+<code>function log(data) {
+  var props = [];
+  for (var key in data) {
+    var value = encodeURIComponent(data[key]);
+    var key = encodeURIComponent(key);
+    props.push(key + '=' + value);
+  }
+  new Image().src = '/log?' + props.join('&');
+}</code>
+        </pre>
+    </div>
+    <div class="slide">
+        <h2>window.onerror</h2>
+        <ul>
+            <li>Обработчик всех JS-ошибок в браузере</li>
+            <li>Есть errorMessage, scriptUrl, line</li>
+            <li>Нет стека вызовов</li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h2>window.onerror</h2>
+        <pre class="min prettyprint lang-js">
+            <code>window.onerror = function(msg, url, line) {</code>
+            <code>  log({</code>
+            <code>    type: 'jserror',</code>
+            <code>    msg: msg,</code>
+            <code>    url: url,</code>
+            <code>    line: line</code>
+            <code>  })</code>
+            <code>})</code>
+        </pre>
+    </div>
+    <div class="slide">
+        <h2>Но...</h2>
+        <p>...первые логи вам выдадут вот такую статистику</p>
+        <pre>
+            <code>95% msg=Script error.&url=&line=0</code>
+            <code>0.2% ...</code>
+            <code>0.1% ...</code>
+        </pre>
+    </div>
+    <div class="slide">
+        <h2>Главная проблема window.onerror</h2>
+        <figure>
+            <blockquote>
+                <p>If the location URL does not have a same origin as the origin, then set message to "Script error.", set location to the empty string, and set line to 0.</p>
+            </blockquote>
+            <figcaption><a href="http://dev.w3.org/html5/spec/webappapis.html#report-the-error">http://dev.w3.org/html5/spec/webappapis.html#report-the-error</a></figcaption>
+        </figure>
+    </div>
+    <div class="slide">
+        <h2>Главная проблема window.onerror</h2>
+        <p>Решается только в&nbsp;Firefox 13+ с помощью <span style="white-space: nowrap;">&lt;script src="…" <code>crossorigin="anonymous"</code>>&lt;/script></span>.
+        <p>А сервер должен ответить CORS-заголовком <code style="white-space: nowrap;">Access-Control-Allow-Origin: *</code></p>
+        <p>Атрибут есть в черновике HTML 5.1. Ждем…</p>
+    </div>
+    <div class="slide">
+        <h2>Главная проблема crossorigin="anonymous"</h2>
+        <p>Если Chrome, Firefox или Opera не получит правильный заголовок <code>Access-Control-Allow-Origin</code>, то заблокирует загрузку скрипта.</p>
+    </div>
+    <div class="slide">
+        <h2>try-catch?</h2>
+        <p>Все обернуть в try-catch сложно, потому что JS – асинхронный язык.</p>
+        <p>Также стоит учитывать, что try-catch влияет на производительность.</p>
+    </div>
+    <div class="slide cover h c" style="background: white">
+        <img src="pictures/why.jpg"/>
+    </div>
+    <div class="slide shout">
+        <h2>Другие способы исполнения JS</h2>
+    </div>
+    <div class="slide">
+        <h2>Общий принцип</h2>
+        <ol>
+            <li>Грузим JS как текст (XHR, localStorage)</li>
+            <li>Исполняем в браузере в same-origin policy</li>
+        </ol>
+    </div>
+    <div class="slide">
+        <h2>createElement('script')</h2>
+        <table class="results">
+            <thead>
+            <tr>
+                <th></th>
+                <th>onerror<br/>msg</th>
+                <th>onerror<br/>url</th>
+                <th>onerror<br/>line</th>
+                <th>catch<br/>msg</th>
+                <th>catch<br/>url</th>
+                <th>catch<br/>line</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Chrome 26</td>
+                <td class="good">+</td>
+                <td class="bad">-</td>
+                <td class="bad">-</td>
+                <td class="good">+</td>
+                <td class="bad">-</td>
+                <td class="avg">*</td>
+            </tr>
+            <tr>
+                <td>Fx 22</td>
+                <td class="good">+</td>
+                <td class="bad">-</td>
+                <td class="bad">-</td>
+                <td class="good">+</td>
+                <td class="bad">-</td>
+                <td class="avg">*</td>
+            </tr>
+            <tr>
+                <td>IE 9</td>
+                <td class="good">+</td>
+                <td class="bad">-</td>
+                <td class="bad">-</td>
+                <td class="good">+</td>
+                <td class="bad">-</td>
+                <td class="bad">-</td>
+            </tr>
+            <tr>
+                <td>IE 10</td>
+                <td class="good">+</td>
+                <td class="bad">-</td>
+                <td class="bad">-</td>
+                <td class="good">+</td>
+                <td class="bad">-</td>
+                <td class="avg">*</td>
+            </tr>
+            <tr>
+                <td>Opera 12.15</td>
+                <td class="good">+</td>
+                <td class="bad">-</td>
+                <td class="bad">-</td>
+                <td class="good">+</td>
+                <td class="bad">-</td>
+                <td class="avg">*</td>
+            </tr>
+            </tbody>
+        </table>
+        <p>* – строка без урла почти бесполезна</p>
+    </div>
+    <div class="slide">
+        <h2>eval / new Function / setTimeout</h2>
+        <table class="results">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>onerror<br/>msg</th>
+                    <th>onerror<br/>url</th>
+                    <th>onerror<br/>line</th>
+                    <th>catch<br/>msg</th>
+                    <th>catch<br/>url</th>
+                    <th>catch<br/>line</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Chrome 26</td>
+                    <td class="good">+</td>
+                    <td class="bad">-</td>
+                    <td class="avg">*</td>
+                    <td class="good">+</td>
+                    <td class="bad">-</td>
+                    <td class="avg">*</td>
+                </tr>
+                <tr>
+                    <td>Fx 22</td>
+                    <td class="good">+</td>
+                    <td class="bad">-</td>
+                    <td class="bad">-</td>
+                    <td class="good">+</td>
+                    <td class="bad">-</td>
+                    <td class="bad">-</td>
+                </tr>
+                <tr>
+                    <td>IE 9</td>
+                    <td class="good">+</td>
+                    <td class="bad">-</td>
+                    <td class="bad">-</td>
+                    <td class="good">+</td>
+                    <td class="bad">-</td>
+                    <td class="bad">-</td>
+                </tr>
+                <tr>
+                    <td>IE 10</td>
+                    <td class="good">+</td>
+                    <td class="bad">-</td>
+                    <td class="avg">*</td>
+                    <td class="good">+</td>
+                    <td class="bad">-</td>
+                    <td class="avg">*</td>
+                </tr>
+                <tr>
+                    <td>Opera 12.15</td>
+                    <td class="good">+</td>
+                    <td class="bad">-</td>
+                    <td class="avg">*</td>
+                    <td class="good">+</td>
+                    <td class="bad">-</td>
+                    <td class="avg">*</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>* – строка без урла почти бесполезна</p>
+    </div>
+    <div class="slide">
+        <h2>&lt;script src="data:..."</h2>
+        <table class="results">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>onerror<br/>msg</th>
+                    <th>onerror<br/>url</th>
+                    <th>onerror<br/>line</th>
+                    <th>catch<br/>msg</th>
+                    <th>catch<br/>url</th>
+                    <th>catch<br/>line</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Chrome 26</td>
+                    <td class="bad">-</td>
+                    <td class="bad">-</td>
+                    <td class="bad">-</td>
+                    <td class="good">+</td>
+                    <td class="avg">*</td>
+                    <td class="avg">**</td>
+                </tr>
+                <tr>
+                    <td>Fx 22</td>
+                    <td class="bad">-</td>
+                    <td class="avg">*</td>
+                    <td class="bad">-</td>
+                    <td class="good">+</td>
+                    <td class="avg">*</td>
+                    <td class="bad">-</td>
+                </tr>
+                <tr>
+                    <td>Opera 12.15</td>
+                    <td class="bad">-</td>
+                    <td class="bad">-</td>
+                    <td class="bad">-</td>
+                    <td class="good">+</td>
+                    <td class="avg">*</td>
+                    <td class="avg">**</td>
+                </tr>
+            </tbody>
+        </table>
+        <code>&lt;script src="data:text/javascript,..."></code><br/>
+        <p class="pre">* – урлом является весь src (исходный текст)</p>
+        <p>** – код вытягивается в одну строку</p>
+    </div>
+    <div class="slide">
+        <h2>&lt;a href="javascript:..."</h2>
+        <table class="results">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>onerror<br/>msg</th>
+                    <th>onerror<br/>url</th>
+                    <th>onerror<br/>line</th>
+                    <th>catch<br/>msg</th>
+                    <th>catch<br/>url</th>
+                    <th>catch<br/>line</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Chrome 26</td>
+                    <td class="good">+</td>
+                    <td class="bad">-</td>
+                    <td class="bad">-</td>
+                    <td class="good">+</td>
+                    <td class="bad">-</td>
+                    <td class="avg">**</td>
+                </tr>
+                <tr>
+                    <td>Fx 22</td>
+                    <td class="good">+</td>
+                    <td class="avg">*</td>
+                    <td class="bad">-</td>
+                    <td class="good">+</td>
+                    <td class="avg">*</td>
+                    <td class="bad">-</td>
+                </tr>
+                <tr>
+                    <td>IE 9</td>
+                    <td class="good">+</td>
+                    <td class="bad">-</td>
+                    <td class="bad">-</td>
+                    <td class="good">+</td>
+                    <td class="bad">-</td>
+                    <td class="bad">-</td>
+                </tr>
+                <tr>
+                    <td>IE 10</td>
+                    <td class="good">+</td>
+                    <td class="bad">-</td>
+                    <td class="avg">**</td>
+                    <td class="good">+</td>
+                    <td class="bad">-</td>
+                    <td class="avg">**</td>
+                </tr>
+                <tr>
+                    <td>Opera 12.15</td>
+                    <td class="bad">-</td>
+                    <td class="bad">-</td>
+                    <td class="bad">-</td>
+                    <td class="good">+</td>
+                    <td class="avg">*</td>
+                    <td class="avg">**</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="line-height: 40px">
+        * – урлом является весь src (исходный текст)<br/>
+        ** – код вытягивается в одну строку
+        </p>
+    </div>
+    <div class="slide">
+        <h2>Blob</h2>
+        <pre class=" prettyprint lang-js">
+            <code>var blob = <mark>new Blob([code]</mark>,</code>
+            <code>  {type: 'text/javascript'});</code>
+            <code>var url = <mark>URL.createObjectURL(blob)</mark>;</code>
+            <code>var script = document.createElement('script');</code>
+            <code>script.src = url;</code>
+            <code><mark>URL.revokeObjectURL(url)</mark>;</code>
+            <code>document.body.appendChild(script);</code>
+        </pre>
+    </div>
+    <div class="slide">
+        <h2>Blob</h2>
+        <table class="results">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>onerror<br/>msg</th>
+                    <th>onerror<br/>url</th>
+                    <th>onerror<br/>line</th>
+                    <th>catch<br/>msg</th>
+                    <th>catch<br/>url</th>
+                    <th>catch<br/>line</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Chrome 26</td>
+                    <td class="good">+</td>
+                    <td class="avg">*</td>
+                    <td class="good">+</td>
+                    <td class="good">+</td>
+                    <td class="avg">*</td>
+                    <td class="good">+</td>
+                </tr>
+                <tr>
+                    <td>Fx 22</td>
+                    <td class="good">+</td>
+                    <td class="avg">*</td>
+                    <td class="good">+</td>
+                    <td class="good">+</td>
+                    <td class="avg">*</td>
+                    <td class="good">+</td>
+                </tr>
+                <tr>
+                    <td>IE 10</td>
+                    <td class="good">+</td>
+                    <td class="avg">*</td>
+                    <td class="good">+</td>
+                    <td class="good">+</td>
+                    <td class="avg">*</td>
+                    <td class="good">+</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>* – урлом является id Blob'а. Если исполняется несколько кусков кода, то можно сделать простой маппинг ресурсов</p>
+    </div>
+    <div class="slide shout">
+        <h2>Что еще надо знать про window.onerror?</h2>
+    </div>
+    <div class="slide">
+        <h2>Избавляемся от вечного<br/>"error at line 1"</h2>
+        <p>После минификации весь код вытягивается в одну строку, из-за этого неудобно искать ошибки с символе 30768.</p>
+        <p>Поможет UglifyJS
+        <code style="white-space: nowrap">$ uglifyjs page.js -b beautify=false,max-line-len=100</code> </p>
+    </div>
+    <div class="slide">
+        <h2 style="margin-bottom: 20px">Вместо msg может быть событие</h2>
+        <p class="pre">...о незагрузке скрипта</p>
+        <pre class="min prettyprint lang-js">
+            <code>if (msg && typeof msg != 'string') {</code>
+            <code>  if (msg.type && msg.target) {</code>
+            <code>    try {</code>
+            <code>      url = msg.target.src;</code>
+            <code>    } catch(e) {}</code>
+            <code>    msg = 'Error loading script';</code>
+            <code>  }</code>
+            <code>}</code>
+        </pre>
+    </div>
+    <div class="slide">
+        <h2>Фильтруем не наши ошибки</h2>
+        <pre class="prettyprint lang-js">
+            <code>if (url && (</code>
+            <code>  /(miscellaneous|extension)_bindings/.test(url) ||</code>
+            <code>  /^chrome:/.test(url) ||</code>
+            <code>  /^file:/.test(url)</code>
+            <code>) {</code>
+            <code>  return;</code>
+            <code>}</code>
+        </pre>
+    </div>
+    <div class="slide">
+        <h2>Обрабатываем JSONP</h2>
+        <pre class=" prettyprint lang-js">
+            <code>if (url && /(&|\?)callback=/.test(url)) {</code>
+            <code>  errorType = 'noJSONPResponse';</code>
+            <code>}</code>
+        </pre>
+    </div>
+    <div class="slide shout">
+        <h2>Что ещё можно логировать?</h2>
+    </div>
+    <div class="slide">
+        <h2>Неожиданное поведение</h2>
+        <pre class=" prettyprint lang-js">
+            <code>if (data && data.status === 'OK') {</code>
+            <code>  // все хорошо</code>
+            <code>} else {</code>
+            <code>  log({</code>
+            <code>    'type': 'something_went_wrong',</code>
+            <code>    'some_usefull_data': data</code>
+            <code>  )}</code>
+            <code>}</code>
+        </pre>
+    </div>
+    <div class="slide">
+        <h2>Важный код в try-catch</h2>
+        <pre class="min prettyprint lang-js">
+            <code>try {</code>
+            <code>  // все хорошо</code>
+            <code>} сatch (e) {</code>
+            <code>  log({</code>
+            <code>    'type': 'exception',</code>
+            <code>    'msg': e.message || e.toString(),</code>
+            <code>    'stack': e.stacktrace || e.stack</code>
+            <code>  )}</code>
+            <code>}</code>
+        </pre>
+    </div>
+    <div class="slide">
+        <h2>Транспорты и долговисящие соединения</h2>
+        <p>Их можно отлаживать с помощью скрытой консоли, доступной по хоткею.</p>
+        <ul>
+            <li>Всегда можно посмотреть все события</li>
+            <li>Можно отправлять весь лог на анализ</li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h2>Логи для ленивых и богатых</h2>
+        <ul>
+            <li><a href="http://errorception.com">Errorception</a> (платный)</li>
+            <li><a href="http://www.exceptionhub.com/">ExceptionHub</a> (платный)</li>
+            <li><a href="http://jslogger.com/">JSLogger</a> (платный)</li>
+            <li><a href="http://www.muscula.com/">Muscula</a> (пока бесплатный)</li>
+            <li><a href="https://www.proxino.com/">Proxino</a> (платный)</li>
+            <li><a href="https://qbaka.com/">Qbaka</a> (платный)</li>
+        </ul>
+    </div>
+    <div class="slide shout">
+        <h2>Подводим итоги</h2>
+    </div>
+    <div class="slide">
+        <h2>Логируем поведение пользователя</h2>
+        <ul>
+           <li>Всегда знаете как релиз работает у настоящих пользователей.</li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h2>Логируем поведение пользователя</h2>
+        <ul>
+           <li>Всегда знаете как релиз работает у настоящих пользователей.</li>
+           <li>Всегда знаете что не работает у пользователя.</li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h2>Логируем поведение пользователя</h2>
+        <ul>
+           <li>Всегда знаете как релиз работает у настоящих пользователей.</li>
+           <li>Всегда знаете что не работает у пользователя.</li>
+           <li>Проще анализировать проблему, проще службе поддержки, проще исправить.</li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h2>Логируем поведение пользователя</h2>
+        <ul>
+           <li>Всегда знаете как релиз работает у настоящих пользователей.</li>
+           <li>Всегда знаете что не работает у пользователя.</li>
+           <li>Проще анализировать проблему, проще службе поддержки, проще исправить.</li>
+           <li>Резко возрос рейт ошибок? Всем разослали смс-ку и начинаем чинить.</li>
+        </ul>
+    </div>
+    <div class="slide">
+        <h2>И помните</h2>
+        <ol>
+            <li>Если в каждом релизе количество ошибок вырастает на 1%, то через 10 релизов будет +11%</li>
+        </ol>
+    </div>
+    <div class="slide">
+        <h2>И помните</h2>
+        <ol>
+            <li>Если в каждом релизе количество ошибок вырастает на 1%, то через 10 релизов будет +11%.</li>
+            <li>Логов много не бывает!</li>
+        </ol>
+    </div>
+    <div class="slide first">
+        <div class="info" style="width: 500px; left: 60px; font-size: 100%; top: 200px">
+            <p>Алексей Андросов</p>
+            <p>Старший разработчик интерфейсов</p>
+            <p>
+                <img src="pictures/favicon-ie9.ico" style="width: 25px; height: 25px; margin-bottom: -7px"/>
+                <a href="mailto:doochik@ya.ru" style="margin-right: 20px">doochik@ya.ru</a>
+            </p>
+            <p>
+                <img src="pictures/twitter-bird-blue-on-white.png" style="width: 40px; height: 40px; margin: 0 0 -15px -10px"/>
+                <a style="margin-left: -8px" href="https://twitter.com/doochik">@doochik</a>
+            </p>
+            <p>
+                <img src="pictures/github.svg" style="width: 40px; height: 40px; margin: 0 0 -15px -10px"/>
+                <a style="margin-left: -8px" href="https://github.com/doochik">github.com/doochik</a>
+            </p>
+        </div>
+    </div>
+	<div class="progress"><div></div></div>
+	<script src="scripts/script.js"></script>
+
+    <script src="google-code-prettify/run_prettify.js"></script>
+</body>
+</html>
